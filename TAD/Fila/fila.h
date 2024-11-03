@@ -12,19 +12,21 @@ typedef struct Cliente
 typedef struct No
 {
     Cliente cliente;
-    No *proximo;
+    struct No *proximo;
 
 }No;
 
 typedef struct Fila
 {
     No *inicio;
-    No *fim;
+    //No *fim;
     int qtd_pessoas;
 
 }Fila;
 
-Cliente preencheCliente(Cliente cliente, int qtd_pessoas);
+int menu();
+
+Cliente preencheCliente (int qtd_pessoas);
 
 void imprimeCliente(Cliente cliente);
 
